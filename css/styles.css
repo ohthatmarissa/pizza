@@ -1,14 +1,21 @@
 .jumbotron {
   text-align: center;
   font-family: monospace;
+  background-color: pink;
   }
 
 #pizza-time {
   text-align: center;
   font-family: monospace;
+  background-color: pink;
 }
 
 #make-pizza {
   display: none;
   text-align: center;
+}
+
+body {
+  background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2015/04/04/655979/6f14d6cf490f9078300d0ff536ba47af-700.jpg);
+  background-repeat: no-repeat;
 }
