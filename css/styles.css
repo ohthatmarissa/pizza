@@ -3,7 +3,12 @@
   font-family: monospace;
   }
 
-h1 {
+#pizza-time {
   text-align: center;
   font-family: monospace;
+}
+
+#make-pizza {
+  display: none;
+  text-align: center;
 }
