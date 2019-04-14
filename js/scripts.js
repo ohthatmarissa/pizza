@@ -8,25 +8,30 @@ function UnicornPizza(size, sauce, toppings) {
 UnicornPizza.prototype.order = function() {
   return this.size + " " + this.sauce + " " + this.toppings + " $" + this.cost();
 }
-// 
-// UnicornPizza.prototype.cost = function() {
-//   var cost = 0;
-//   if (this.size === "small") {
-//     cost += 10;
-//   }
-//   else if (this.size === "medium") {
-//     cost += 15;
-//   }
-//   else if (this.size === "large") {
-//     cost += 20;
-//   }
-//   for (var topping in this.toppings) {
-//     if (this.toppings === "freshFruit")
-// }
-//
-//
-//   return cost;
-// }
+
+UnicornPizza.prototype.cost = function() {
+  var cost = 0;
+  if (this.size === "small") {
+    cost += 10;
+  }
+  else if (this.size === "medium") {
+    cost += 15;
+  }
+  else if (this.size === "large") {
+    cost += 20;
+  }
+
+  for (var topping in this.toppings) {
+    if (topping === "freshFruit") {
+      cost += 3;
+    }
+    else {
+      cost += 1;
+    }
+  }
+
+  return cost;
+}
 
 
 
