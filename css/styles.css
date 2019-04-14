@@ -1,13 +1,21 @@
-.jumbotron {
+/* .jumbotron {
   text-align: center;
   font-family: monospace;
-  background-color: pink;
-  }
+  background-image: url(../img/colorful-burst.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .5;
+  } */
 
 #pizza-time {
+  margin-top: 30px;
   text-align: center;
   font-family: monospace;
+  color: white;
+  text-shadow: 2px 2px 2px black;
   background-color: pink;
+  border: 20px solid #ff00ff;
 }
 
 #order {
@@ -16,8 +24,12 @@
 }
 
 body {
-  background-image: url(../img/colors.jpg);
+  background-image: url(../img/sprinkles.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+button {
+  background-color: 
 }
