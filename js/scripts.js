@@ -1,57 +1,67 @@
 //Business Logic
-function unicornPizza(size, sauce, toppings) {
+function UnicornPizza(size, sauce, toppings) {
   this.size = size,
   this.sauce = sauce,
   this.toppings = toppings
 }
 
-unicornPizza.prototype.yumPizza = function() {
-  return this.size + " " + this.sauce + " " + this.toppings;
+UnicornPizza.prototype.order = function() {
+  return this.size + " " + this.sauce + " " + this.toppings + " $" + this.cost();
 }
-// unicornPizza.prototype.cost = function() {
+// 
+// UnicornPizza.prototype.cost = function() {
+//   var cost = 0;
 //   if (this.size === "small") {
-//     cost += 10; }
-//   else if (this.size === "medium") {
-//     cost += 15; }
-//   else if (this.size === "large") {
-//     cost += 20; }
-//
-//   if (this.topping === "freshFruit")
+//     cost += 10;
 //   }
+//   else if (this.size === "medium") {
+//     cost += 15;
+//   }
+//   else if (this.size === "large") {
+//     cost += 20;
+//   }
+//   for (var topping in this.toppings) {
+//     if (this.toppings === "freshFruit")
+// }
+//
+//
+//   return cost;
+// }
 
 
 
 
-
-//User interface logic
-
-function displayPizzaDetails(makePizza) {
-var pizzaOrder = $("ul#displayOrder");
-var htmlForPizzaOrder = "";
-makePizza.unicornPizza.forEach(function(unicornPizza) {
-  htmlForPizzaOrder += "<li id=" + unicornPizza.size + " " + unicornPizza.sauce + " " + unicornPizza.toppings +"</li>"
-  });
-  pizzaOrder.html(htmlForPizzaOrder);
-};
+//
+// User interface logic
+//
+// function displayPizzaDetails(makePizza) {
+// var pizzaOrder = $("ul#displayOrder");
+// var htmlForPizzaOrder = "";
+// makePizza.unicornPizza.forEach(function(unicornPizza) {
+//   htmlForPizzaOrder += "<li id=" + unicornPizza.size + " " + unicornPizza.sauce + " " + unicornPizza.toppings +"</li>"
+//   });
+//   pizzaOrder.html(htmlForPizzaOrder);
+// };
 
 
 $().ready(function() {
   $("form#pizza-time").submit(function(event) {
     event.preventDefault();
-    $("#make-pizza").show();
-    var inputtedSize = $("input:checkbox[name=size]:checked").each(function() {
-      size.push(this.val);
-      });
-    var inputtedSauce = $("input:checkbox[name=sauce]:checked").each(function() {
-      sauce.push(this.val);
-      });
-    var inputtedToppings = $("input:checkbox[name=toppings]:checked").each(function() {
-      toppings.push(this.val);
-      });
 
-    var unicornPizza = new unicornPizza(inputtedSize, inputtedSauce, inputtedToppings);
-    unicornPizza.yumPizza(newUnicornPizza);
-    console.log(unicornPizza);
+    var sauce = [];
+    var toppings = [];
+
+    var size = $("input:radio[name=size]:checked").val();
+    $("input:checkbox[name=sauce]:checked").each(function() {
+      sauce.push(this.value);
+    });
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      toppings.push(this.value);
+    });
+    var unicornPizza = new UnicornPizza(size, sauce, toppings);
+    $("#order").append(unicornPizza.order())
+    $("#order").show();
+    // console.log(unicornPizza.order());
     // var cost = 0;
 
 
