@@ -14,8 +14,10 @@ A website created with HTML, CSS, Bootstrap, JavaScript, and jQuery where the us
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses localhost:5004 | Homepage with user input form |
 | **Program recognizes when user makes a size selection** | User input: "Medium" | Output: "Medium selected" |
-| **Program recognizes when user makes topping selections**| User Input: "extra cheese and pineapple" | Output: "extra cheese and pineapple selected" |
+| **Program recognizes when user makes a sauce selection** | User input: "Frosting" | Output: "Frosting selected" |
+| **Program recognizes when user makes topping selections**| User Input: "Marshmellow Fluff and Fresh Fruit" | Output: "Marshmellow Fluff and Fresh Fruit" |
 | **Program calculates cost of selections**| Input: "pizza size and toppings" | Output: "Your cost is $" |
+
 
 
 ## Setup/Installation Requirements

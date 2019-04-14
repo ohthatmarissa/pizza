@@ -6,48 +6,34 @@ function UnicornPizza(size, sauce, toppings) {
 }
 
 UnicornPizza.prototype.order = function() {
-  return this.size + " " + this.sauce + " " + this.toppings + " $" + this.cost();
+  return " A " + this.size + " Unicoron Pizza With " + this.sauce + " Sprinkled With " + this.toppings + " $" + this.cost();
 }
 
 UnicornPizza.prototype.cost = function() {
   var cost = 0;
-  if (this.size === "small") {
+  if (this.size === "Small") {
     cost += 10;
   }
-  else if (this.size === "medium") {
+  else if (this.size === "Medium") {
     cost += 15;
   }
-  else if (this.size === "large") {
+  else if (this.size === "Large") {
     cost += 20;
   }
 
   for (var topping in this.toppings) {
-    if (topping === "freshFruit") {
+    if (topping === "Fresh Fruit") {
       cost += 3;
     }
     else {
       cost += 1;
     }
   }
-
   return cost;
 }
 
 
-
-
-//
-// User interface logic
-//
-// function displayPizzaDetails(makePizza) {
-// var pizzaOrder = $("ul#displayOrder");
-// var htmlForPizzaOrder = "";
-// makePizza.unicornPizza.forEach(function(unicornPizza) {
-//   htmlForPizzaOrder += "<li id=" + unicornPizza.size + " " + unicornPizza.sauce + " " + unicornPizza.toppings +"</li>"
-//   });
-//   pizzaOrder.html(htmlForPizzaOrder);
-// };
-
+//User interface
 
 $().ready(function() {
   $("form#pizza-time").submit(function(event) {
@@ -66,9 +52,6 @@ $().ready(function() {
     var unicornPizza = new UnicornPizza(size, sauce, toppings);
     $("#order").append(unicornPizza.order())
     $("#order").show();
-    // console.log(unicornPizza.order());
-    // var cost = 0;
-
 
   });
 });
