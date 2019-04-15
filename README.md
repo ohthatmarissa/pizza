@@ -7,6 +7,7 @@
 ## Description
 
 A website created with HTML, CSS, Bootstrap, JavaScript, and jQuery where the user gets to make selections from a choice of checkboxes to build their perfect pizza with a cost calculation using object constructors and prototypes.
+Check it out! https://ohthatmarissa.github.io/pizza/
 
 
 ### Specs
