@@ -6,7 +6,7 @@ function UnicornPizza(size, sauce, toppings) {
 }
 
 UnicornPizza.prototype.order = function() {
-  return " A " + this.size + " Unicoron Pizza With " + this.sauce + " Sprinkled With " + this.toppings + " $" + this.cost();
+  return " A " + this.size + " Unicoron Pizza With " + this.sauce + " Sprinkled With" + this.toppings + " $" + this.cost();
 }
 
 UnicornPizza.prototype.cost = function() {
@@ -22,13 +22,9 @@ UnicornPizza.prototype.cost = function() {
   }
 
   for (var topping in this.toppings) {
-    if (topping === "Fresh Fruit") {
-      cost += 3;
-    }
-    else {
-      cost += 1;
-    }
+    cost += 2;
   }
+
   return cost;
 }
 
